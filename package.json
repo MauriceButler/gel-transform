@@ -1,0 +1,28 @@
+{
+  "name": "gel-transform",
+  "version": "0.0.1",
+  "description": "Transform for processing gel expressions with Browserify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MauriceButler/gel-transform.git"
+  },
+  "keywords": [
+    "gel",
+    "browserify",
+    "transform"
+  ],
+  "author": "maurice butler <maurice.butler@gmail.com>",
+  "license": "MIT",
+  "dependencies" : {
+      "through" : ">=0.0.0",
+      "gedi" : ">=0.0.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "browserifyer": "index.js"
+  }
+}
