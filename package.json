@@ -1,6 +1,6 @@
 {
   "name": "gel-transform",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Transform for processing gel expressions with Browserify",
   "main": "gel-transform",
   "scripts": {
@@ -23,6 +23,6 @@
   },
   "preferGlobal": "true",
   "bin": {
-    "browserifyer": "index.js"
+    "gel-transform": "index.js"
   }
 }
