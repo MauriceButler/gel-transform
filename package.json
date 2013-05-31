@@ -1,8 +1,8 @@
 {
   "name": "gel-transform",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Transform for processing gel expressions with Browserify",
-  "main": "gel-transform",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,9 +20,5 @@
   "dependencies" : {
       "through" : ">=0.0.0",
       "gedi" : ">=0.0.0"
-  },
-  "preferGlobal": "true",
-  "bin": {
-    "gel-transform": "index.js"
   }
 }

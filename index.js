@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-
 var through = require('through'),
 	Gedi = require('gedi'),
 	gedi = new Gedi();
 
 module.exports = function (file) {
-    if (!/\.gel/.test(file)) return through();
+    if (!/\.gel/.test(file)) {
+        return through();
+    }
 
     var buffer = "";
 
