@@ -1,10 +1,9 @@
 var through = require('through'),
-	Gedi = require('gedi'),
-	gedi = new Gedi();
+	gelMinifier = require('gel-minifier');
 
 module.exports = function (file) {
     if (!/\.gel/.test(file)) {
-        return through();
+       return through();
     }
 
     var buffer = "";
@@ -13,21 +12,9 @@ module.exports = function (file) {
         buffer += chunk.toString();
     },
     function() {
-        var tokens = gedi.gel.tokenise(buffer),
-            compiled = "module.exports = '";
+        var compiled = "module.exports = '";
 
-        for (var i = 0; i < tokens.length; i++) {
-          if(tokens[i].name !== 'delimiter'){
-            compiled += tokens[i].original;
-          } else {
-            var before = tokens[i - 1];
-
-            if(before && before.name !== 'delimiter'){
-                compiled += ' ';
-            }
-          }
-        }
-
+        compiled += gelMinifier(buffer);
         compiled += "';";
 
         this.queue(compiled);

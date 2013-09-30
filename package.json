@@ -1,6 +1,6 @@
 {
   "name": "gel-transform",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Transform for processing gel expressions with Browserify",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,12 @@
   ],
   "author": "maurice butler <maurice.butler@gmail.com>",
   "license": "MIT",
+  "devDependencies" : {
+    "tape" : "1.1.x",
+    "mockery" : "1.4.x"
+  },
   "dependencies" : {
       "through" : "2.3.x",
-      "gedi" : "0.x.x"
+      "gel-minifier" : "0.x.x"
   }
 }
