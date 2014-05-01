@@ -4,7 +4,7 @@
   "description": "Transform for processing gel expressions with Browserify",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./tests"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,12 @@
   ],
   "author": "maurice butler <maurice.butler@gmail.com>",
   "license": "MIT",
-  "devDependencies" : {
-    "tape" : "1.1.x",
-    "mockery" : "1.4.x"
+  "devDependencies": {
+    "grape": "^0.1.10",
+    "mockery": "^1.4.0"
   },
-  "dependencies" : {
-      "through" : "2.3.x",
-      "gel-minifier" : "0.x.x"
+  "dependencies": {
+    "gel-minifier": "^1.0.0",
+    "through": "^2.3.4"
   }
 }

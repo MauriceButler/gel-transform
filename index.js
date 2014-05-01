@@ -6,7 +6,7 @@ module.exports = function (file) {
        return through();
     }
 
-    var buffer = "";
+    var buffer = '';
 
     return through(function(chunk) {
         buffer += chunk.toString();
@@ -16,6 +16,7 @@ module.exports = function (file) {
 
         compiled += gelMinifier(buffer);
         compiled += "';";
+        compiled += "\n/*\n" + buffer + "\n*/";
 
         this.queue(compiled);
         this.queue(null);
