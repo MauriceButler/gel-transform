@@ -6,3 +6,5 @@ test('gelTransform Exists', function (t) {
     t.ok(gelTransform, 'gelTransform Exists');
     t.equal(typeof gelTransform, 'function');
 });
+
+// TODO: ACtualy test string concatenation...
