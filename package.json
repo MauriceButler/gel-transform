@@ -21,6 +21,9 @@
     "grape": "^0.1.10",
     "mockery": "^1.4.0"
   },
+  "peerDependencies": {
+    "gedi": "^1.0.0"
+  },
   "dependencies": {
     "gel-minifier": "^1.0.0",
     "through": "^2.3.4"

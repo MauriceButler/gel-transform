@@ -1,5 +1,10 @@
 var through = require('through'),
-	gelMinifier = require('gel-minifier');
+	gelMinifier = require('gel-minifier'),
+    Gedi = require('gedi'),
+    gedi = new Gedi(),
+    gelMinifier = require('gel-minifier')(function (expression){
+        return gedi.gel.tokenise(expression);
+    });
 
 module.exports = function (file) {
     if (!/\.gel/.test(file)) {
